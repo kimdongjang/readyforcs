@@ -75,4 +75,27 @@ const doubled = a.map((num) => {
 
 
 
+## load와 DOMContenetLoaded 이벤트의 차이
+```window```의 load 이벤트는 DOM과 모든 종속 리소스와 에셋들이 로드된 후에 발생한다.
+```DOMContentLoaded``` 이벤트는 스타일시트, 이미지, 서브프레임 로딩을 기다리지 않고, 초기 HTML 문서가 완전히 로드되고 파싱되면 발생한다.
+
+## ```==```와 ```===```의 차이
+==는 추상 동등 연산자이고 ===는 완전 동등 연산자다.  
+==연산자는 타입 변환이 필요한 경우 타입 변환을 한 후에 동등한지 비교하며, ===연산자는 타입 변환을 하지 않으므로 두 값이 같은 타입이 아닌 경우 ===는 false를 반환한다.
+편의상 null과 undefined를 비교할 때를 제외하고, ==연산자를 절대 사용하지 않도록 한다. a == null은 a가 null 또는 undefined이면 true를 반환한다.
+```js
+var a = null;
+console.log(a == null); // true
+console.log(a == undefined); // true
+```
+
+
+## same-origin 정책
+same-origin 정책은 JavaScript가 도메인 경계를 넘어서 요청하는 것을 방지한다.  
+origin은 URI 체계, 호스트 이름, 포트 번호의 조합으로 정의된다.  
+이 정책은 한 페이지의 악의적인 스크립트가 해당 페이지의 DOM을 통해 다른 웹 페이지의 중요한 데이터에 접근하는 것을 방지한다.  
+cookie에서 사용된다.  
+
+
+
 
